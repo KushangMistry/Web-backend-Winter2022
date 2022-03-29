@@ -47,7 +47,6 @@ router.get("/applications", (req, res) => {
 
 //post call for adding new applications users
 router.post("/addapplications", (req, res) => {
-  //console.log("Req : ", req.body);
   var email = req.body.formValues.email;
   var fullName = req.body.formValues.fullName;
   var currentaddress = req.body.formValues.currentaddress;
@@ -56,10 +55,7 @@ router.post("/addapplications", (req, res) => {
   var noofpeople = req.body.formValues.noofpeople;
   var date = req.body.formValues.date;
 
-  console.log("Fullname: ", fullName);
-
   const applicationIdget = applicationID();
-  //console.log(applicationIdget);
 
   const newApplication = new applications({
     _id: new mongoose.Types.ObjectId(),
@@ -77,14 +73,12 @@ router.post("/addapplications", (req, res) => {
   newApplication
     .save()
     .then((result) => {
-      console.log(result);
       return res.status(201).json({
         message: "Application created",
         success: true,
       });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(500).json({
         message: "Internal server error",
         success: false,
@@ -107,7 +101,6 @@ router.put("/updatestatus", (req, res) => {
       });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(500).json({
         message: "Internal server error",
         success: false,
@@ -129,7 +122,6 @@ router.post("/deleteApplication", (req, res) => {
       });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(500).json({
         message: "Internal server error",
         success: false,
