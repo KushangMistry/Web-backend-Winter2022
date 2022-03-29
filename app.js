@@ -42,6 +42,9 @@ app.use("/getallproperties", getAllProperties);
 const applicationdashboardRoute = require("./api/controller/applicationdashboardRoute");
 app.use("/applicationdashboardRoute", applicationdashboardRoute);
 
+const getHouses = require("./api/controller/getHouseList");
+app.use("/getallhouses", getHouses);
+
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
 });
