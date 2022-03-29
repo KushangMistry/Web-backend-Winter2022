@@ -32,6 +32,12 @@ app.use("/sign-in-user", authenticateUser);
 const getOneUserDetails = require("./api/controller/getSingleUser");
 app.use("/getOneUserDetails", getOneUserDetails);
 
+const getProperty = require("./api/controller/getProperty");
+app.use("/getProperty", getProperty);
+
+const getAllProperties = require("./api/controller/getAllProperties");
+app.use("/getallproperties", getAllProperties);
+
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
 });
