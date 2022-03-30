@@ -24,6 +24,12 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("MongoDB Connection Failed", err));
 
+const thread = require("./api/controller/thread");
+app.use("/", thread);
+
+const reply = require("./api/controller/threadReply");
+app.use("/thread", reply);
+
 const signupUser = require("./api/controller/signupUser");
 app.use("/sign-up-user", signupUser);
 
