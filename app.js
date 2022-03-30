@@ -1,6 +1,6 @@
 /**
  * @author Kushang Arunbhai Mistry (B00870521) (Base file)
- * A main file for routing purposes and request handling purposes
+ * A main file for routing purposes and request handling purposes.
  */
 const express = require("express");
 const mongoose = require("mongoose");
