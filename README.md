@@ -72,4 +72,4 @@ This way, the "Assignment 3" backend project is up and running on the local host
 - Professor and all the TAs who taught and gave direction while needed, and Marker who provided valuable feeback everytime.
 - Heroku for backend deployment platform.
 
-# NOTE: This README.md is derived from README.md written by [Kushang Arunbhai Mistry](kushang.mistry) for Assignment 3 Individual submission.
+### NOTE: This README.md is derived from README.md written by [Kushang Arunbhai Mistry](kushang.mistry) for Assignment 3 Individual submission.
