@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * A user model to fetch and store data regarding single user
+ */
+
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 

@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * A property model to fetch and store data regarding single property
+ */
+
 const mongoose = require("mongoose");
 
 const propertySchema = new mongoose.Schema({

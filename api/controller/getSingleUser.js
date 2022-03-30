@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * To fetch details of single user
+ */
+
 const express = require("express");
 const mongoose = require("mongoose");
 const users = require("../model/usersModel");
