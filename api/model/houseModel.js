@@ -1,3 +1,8 @@
+/* 
+  authorName : Sanjuna Konda 
+  email : sn493898@dal.ca
+*/
+
 const mongoose = require("mongoose");
 
 const houseSchema = new mongoose.Schema({
