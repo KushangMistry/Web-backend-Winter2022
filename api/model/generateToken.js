@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * To generate token and send to front
+ */
+
 const jwt = require("jsonwebtoken");
 
 const generateAuthToken = (id) => {

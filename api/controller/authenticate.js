@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * Authenticates the if user is abailable or not
+ */
+
 const express = require("express");
 const mongoose = require("mongoose");
 const { validate } = require("../model/usersModel");

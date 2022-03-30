@@ -33,11 +33,11 @@ exports.create = (req, res) => {
         },
         category: req.body.category,
         rooms: req.body.rooms,
+        people_count: req.body.people,
         bathrooms: req.body.bathrooms,
         price: req.body.price,
         email: req.body.email,
         phone: req.body.phone
-        // published: req.body.published ? req.body.published : false
     });
     // Save House in the database
     house

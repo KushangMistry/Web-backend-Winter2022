@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * To fetch detail of single property
+ */
+
 const express = require("express");
 const mongoose = require("mongoose");
 const property = require("../model/propertyModel");

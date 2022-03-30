@@ -37,11 +37,10 @@ router.get("/applications", (req, res) => {
           success: "true",
           applications: result,
         })
-        .catch((err) => {
-          console.log((err) => {
-            return res.status(500).json({ message: "Internal Server Error!!" });
-          });
-        });
+    }).catch((err) => {
+      console.log((err) => {
+        return res.status(500).json({ message: "Internal Server Error!!" });
+      });
     });
 });
 

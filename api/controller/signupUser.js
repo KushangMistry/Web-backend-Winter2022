@@ -1,3 +1,8 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521)
+ * To add user to the database and system
+ */
+
 const express = require("express");
 const mongoose = require("mongoose");
 const { validate } = require("../model/usersModel");

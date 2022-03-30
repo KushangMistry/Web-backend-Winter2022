@@ -1,9 +1,12 @@
+/**
+ * @author Kushang Arunbhai Mistry (B00870521) (Base file)
+ * A main file for routing purposes and request handling purposes
+ */
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const req = require("express/lib/request");
 const bodyParser = require("body-parser");
-
 
 const app = express();
 
@@ -20,6 +23,12 @@ mongoose
   .connect(mongoURL, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("MongoDB Connection Failed", err));
+
+const thread = require("./api/controller/thread");
+app.use("/", thread);
+
+const reply = require("./api/controller/threadReply");
+app.use("/thread", reply);
 
 const signupUser = require("./api/controller/signupUser");
 app.use("/sign-up-user", signupUser);
@@ -46,8 +55,7 @@ const getHouses = require("./api/controller/getHouseList");
 app.use("/getallhouses", getHouses);
 
 var houseRoutes = require("./api/routes/house.routes.js");
-app.use('/api/houses', houseRoutes);
-
+app.use("/api/houses", houseRoutes);
 
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
