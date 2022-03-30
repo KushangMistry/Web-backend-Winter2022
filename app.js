@@ -51,8 +51,8 @@ app.use("/getallproperties", getAllProperties);
 const applicationdashboardRoute = require("./api/controller/applicationdashboardRoute");
 app.use("/applicationdashboardRoute", applicationdashboardRoute);
 
-// const getHouses = require("./api/controller/getHouseList");
-// app.use("/getallhouses", getHouses);
+const getHouses = require("./api/controller/getHouseList");
+app.use("/getallhouses", getHouses);
 
 var houseRoutes = require("./api/routes/house.routes.js");
 app.use("/api/houses", houseRoutes);

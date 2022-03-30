@@ -9,6 +9,7 @@ module.exports = mongoose => {
               address: { street: String, province: String, city: String },
               category: String,
               rooms: String,
+              people_count: Number,
               bathrooms: Number,
               price: Number,
               email: String,
