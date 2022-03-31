@@ -24,6 +24,12 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("MongoDB Connection Failed", err));
 
+const thread = require("./api/controller/thread");
+app.use("/", thread);
+
+const reply = require("./api/controller/threadReply");
+app.use("/thread", reply);
+
 const signupUser = require("./api/controller/signupUser");
 app.use("/sign-up-user", signupUser);
 
@@ -45,8 +51,8 @@ app.use("/getallproperties", getAllProperties);
 const applicationdashboardRoute = require("./api/controller/applicationdashboardRoute");
 app.use("/applicationdashboardRoute", applicationdashboardRoute);
 
-// const getHouses = require("./api/controller/getHouseList");
-// app.use("/getallhouses", getHouses);
+const getHouses = require("./api/controller/getHouseList");
+app.use("/getallhouses", getHouses);
 
 var houseRoutes = require("./api/routes/house.routes.js");
 app.use("/api/houses", houseRoutes);

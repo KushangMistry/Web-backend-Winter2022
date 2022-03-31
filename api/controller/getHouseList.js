@@ -6,15 +6,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const houses = require("../model/houseModel");
+const db = require("../model");
+const House = db.house;
 
 const router = express.Router();
 
 router.get("", async (req, res) => {
-  await houses
+  await House
     .find()
     .exec()
     .then((result) => {
-      if (houses || houses.length) {
+      if (House || House.length) {
+        console.log(result);
         return res.status(200).json({
           message: "Success",
           success: true,
