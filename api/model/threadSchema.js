@@ -1,3 +1,8 @@
+/* 
+  authorName : Vishvesh Naik 
+  email : vishvesh@dal.ca
+*/
+
 const mongoose = require("mongoose");
 // const jwt = require("jsonwebtoken");
 
