@@ -59,6 +59,7 @@ exports.findAll = (req, res) => {
     var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
     House.find(condition)
         .then(data => {
+            console.log('data',data)
             res.send(data);
         })
         .catch(err => {
