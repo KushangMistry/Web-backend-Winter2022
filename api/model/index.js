@@ -5,4 +5,5 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.house = require("./houseModel.js")(mongoose);
+db.review = require("./reviewModel")(mongoose);
 module.exports = db;
