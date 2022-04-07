@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
   currentCity: { type: String },
   preferredCity: { type: String },
   country: { type: String },
-
+  savedProperties: { type: Array },
   _id: mongoose.Schema.Types.ObjectId,
 });
 

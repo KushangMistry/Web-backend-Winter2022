@@ -66,6 +66,9 @@ app.use("/forgetPasswordAuthenticate", forgetPasswordAuthenticate);
 var changePassword = require("./api/controller/changePassword");
 app.use("/changePassword", changePassword);
 
+var saveProperty = require("./api/controller/saveProperty");
+app.use("/saveProperty", saveProperty);
+
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
 });

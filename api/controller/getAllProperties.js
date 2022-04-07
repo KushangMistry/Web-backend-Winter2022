@@ -5,22 +5,19 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const property = require("../model/propertyModel");
+const { house } = require("../model");
 
 const router = express.Router();
 
 router.post("", async (req, res) => {
-  await property
+  await house
     .find({ _id: { $in: req.body.idList } })
-    .exec()
     .then((result) => {
-      if (property || property.length) {
-        return res.status(200).json({
-          message: "Success",
-          success: true,
-          propertyDetails: result,
-        });
-      }
+      return res.status(200).json({
+        message: "Success",
+        success: true,
+        propertyDetails: result,
+      });
     })
     .catch((err) => {
       console.log((err) => {
