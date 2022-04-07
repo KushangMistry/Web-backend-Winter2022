@@ -40,7 +40,7 @@ router.post("", async (req, res) => {
       to: email,
       subject: "Reset your housify password",
       html:
-        '<html><head></head><body> Please click on the link here to reset your password <a href= "http://localhost:3000/new-password/' +
+        '<html><head></head><body> Please click on the link here to reset your password <a href= "https://housify-group12.herokuapp.com/new-password/' +
         email +
         '">Click Me</a> </body></html>',
     };
