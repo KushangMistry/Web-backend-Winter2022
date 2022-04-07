@@ -52,6 +52,7 @@ router.post("/addapplications", (req, res) => {
   var postalcode = req.body.formValues.postalcode;
   var noofpeople = req.body.formValues.noofpeople;
   var date = req.body.formValues.date;
+  var house_id = req.body.formValues.house_id;
   var house_email = req.body.formValues.house_email;
 
   const applicationIdget = applicationID();
@@ -65,6 +66,7 @@ router.post("/addapplications", (req, res) => {
     postalcode,
     noofpeople,
     date,
+    house_id,
     house_email,
     status: "Applied",
     applicationID: applicationIdget.toString(),
