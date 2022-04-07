@@ -16,7 +16,7 @@ const applicationSchema = {
   date: String,
   applicationID: String,
   status: String,
-  house_id: String,
+  house_email: String,
   applieddate: { type: Date, default: Date.now },
   _id: mongoose.Schema.Types.ObjectId,
 };
