@@ -57,6 +57,15 @@ app.use("/getallhouses", getHouses);
 var houseRoutes = require("./api/routes/house.routes.js");
 app.use("/api/houses", houseRoutes);
 
+var updateUserProfile = require("./api/controller/updateUserProfile");
+app.use("/updateUserProfile", updateUserProfile);
+
+var forgetPasswordAuthenticate = require("./api/controller/forgotPasswordAuthenticate");
+app.use("/forgetPasswordAuthenticate", forgetPasswordAuthenticate);
+
+var changePassword = require("./api/controller/changePassword");
+app.use("/changePassword", changePassword);
+
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
 });

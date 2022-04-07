@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
+  contactNumber: { type: String },
+  currentCity: { type: String },
+  preferredCity: { type: String },
+  country: { type: String },
 
   _id: mongoose.Schema.Types.ObjectId,
 });
