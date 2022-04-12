@@ -69,6 +69,9 @@ app.use("/changePassword", changePassword);
 var saveProperty = require("./api/controller/saveProperty");
 app.use("/saveProperty", saveProperty);
 
+var savePayment = require("./api/controller/savePayments");
+app.use("/savePayment", savePayment);
+
 app.use("/", (req, res) => {
   return res.status(404).json({ message: "Route not found", success: false });
 });

@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
   preferredCity: { type: String },
   country: { type: String },
   savedProperties: { type: Array },
+  payments: { type: Array },
   _id: mongoose.Schema.Types.ObjectId,
 });
 
