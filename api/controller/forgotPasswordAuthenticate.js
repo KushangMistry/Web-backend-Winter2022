@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: "housify.app@gmail.com",
-    pass: "Test@123",
+    pass: "",
   },
 });
 
